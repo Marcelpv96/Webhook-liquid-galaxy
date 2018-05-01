@@ -13,11 +13,9 @@ def function1(request):
     return "Triggered function number one"
 
 
-
-
 """
-- This dictionary use the following schema:
-    {"Intent name": function that trigger}
+- This dictionary uses the following schema:
+    {"Intent name ( intent name used in DialogFlow)": function that trigger}
 
 - In this case, intent name function_1 -> triggers function1().
 """
