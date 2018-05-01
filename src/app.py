@@ -1,4 +1,4 @@
-import json, jsonify
+import json
 import os
 
 from flask import Flask, request, make_response, jsonify
@@ -16,11 +16,10 @@ def webhook():
         answer = lg_functions[name_function](res)
     else:
         answer = "Something wrong"
-    final_answer = generate_webhook_answer(answer)
     return make_response(jsonify({'fulfillmentText': answer}))
 
 
 if __name__ == '__main__':
     port = int(os.getenv('PORT', 5000))
-    print("Starting app on port %d" % port)
+    print "Starting app on port %d" % port
     app.run(debug=False, port=port, host='127.0.0.1')
