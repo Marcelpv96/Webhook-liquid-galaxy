@@ -2,13 +2,13 @@
 - Functions have to has the following template:
 
     def function_name(request):
-        return "message which is said on google assistant"
+        return "message which will be said on google assistant"
 """
 
 
 def function1(request):
     """
-    Here code that will be executed
+    Here insert code that will be executed
     """
     return "Triggered function number one"
 
