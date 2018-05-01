@@ -1,9 +1,7 @@
-import json
+import json, jsonify
 import os
 
-from flask import Flask
-from flask import request
-from flask import make_response
+from flask import Flask, request, make_response, jsonify
 
 from lg import *
 
@@ -19,15 +17,7 @@ def webhook():
     else:
         answer = "Something wrong"
     final_answer = generate_webhook_answer(answer)
-    return  json.dumps(final_answer, indent=4)
-
-
-def generate_webhook_answer(message):
-    return {
-        "speech": message,
-        "displayText": message,
-        "source": "API.AI-LGlab"
-    }
+    return make_response(jsonify({'fulfillmentText': answer}))
 
 
 if __name__ == '__main__':
