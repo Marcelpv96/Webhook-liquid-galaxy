@@ -1,2 +1,2 @@
 # Webhook-liquid-galaxy
-Simple skull to interact with a LG using Dialog Flow
+Simple template to interact with a LG using Dialog Flow
